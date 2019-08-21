@@ -34,10 +34,12 @@ export default class crop {
         this.cropClose = document.querySelector(options.close || ".crop-close");
         this.cropOk = document.querySelector(options.ok || ".crop-ok");
         this.cropZoom = document.querySelector(options.zoom || ".crop-zoom");
+
         this.crop.style.width = this.width + "px";
         this.crop.style.height = this.height + "px";
         this.cropWall.style.width = this.width + "px";
         this.cropWall.style.height = this.height + "px";
+
         this.input.addEventListener("change", (e) => {
             this.files = e.target.files || e.dataTransfer.files;
             if (this.files.length == 0) return false;
@@ -101,7 +103,6 @@ export default class crop {
                 background-color: rgba(0, 0, 0, .5);
                 color: #666;
             }
-
             .crop-wall {
                 position: relative;
                 height: 100%;
@@ -160,7 +161,6 @@ export default class crop {
                 opacity: 0;
                 cursor: pointer;
             }
-
             .crop.active .crop-file {
                 position: absolute;
                 left: 50%;
@@ -168,21 +168,16 @@ export default class crop {
                 transform: translate(-50%, -50%);
                 transition: 0s;
             }
-
             .crop.loading .crop-file {
                 opacity: 0;
-
             }
-
             .crop.active .crop-file svg {
                 width: 50px;
                 height: 50px;
             }
-
             .crop.active .crop-file svg path {
                 fill: #333;
             }
-
             .crop-ok {
                 position: absolute;
                 right: 10px;
@@ -200,15 +195,12 @@ export default class crop {
                 cursor: pointer;
                 opacity: 0;
             }
-
             .crop-ok.show {
                 opacity: 1;
             }
-
             .crop-ok:hover {
                 background-color: rgba(255, 255, 255, 0.2);
             }
-
             .crop-close {
                 position: absolute;
                 top: 15px;
@@ -219,11 +211,9 @@ export default class crop {
                 transition: .3s;
                 transform: scale(0.8);
             }
-
             .crop-close:hover {
                 transform: scale(1);
             }
-
             .crop-close:before {
                 position: absolute;
                 content: '';
@@ -235,7 +225,6 @@ export default class crop {
                 left: 0px;
                 border-radius: 2px;
             }
-
             .crop-close:after {
                 content: '';
                 position: absolute;
@@ -247,7 +236,6 @@ export default class crop {
                 left: 0px;
                 border-radius: 2px;
             }
-
             .crop-zoom {
                 position: absolute;
                 left: 10px;
@@ -256,29 +244,22 @@ export default class crop {
                 opacity: 0;
                 transition: .3s;
             }
-
             .crop-zoom.show {
                 opacity: 1;
             }
-
             input[type=range] {
                 -webkit-appearance: none;
-
             }
-
             input[type=range]:focus {
                 outline: none;
             }
-
             input[type=range]::-webkit-slider-runnable-track {
                 width: 100%;
                 height: 2px;
                 border-radius: 2px;
                 background: #fff;
                 border: none;
-
             }
-
             input[type=range]::-webkit-slider-thumb {
                 height: 16px;
                 width: 16px;
@@ -289,33 +270,33 @@ export default class crop {
                 margin-top: -8px;
                 transition: .3s;
             }
-
             input[type=range]::-webkit-slider-thumb:hover {
                 transform: scale(1.2);
             }
-
             input[type=range]::-moz-range-track {
                 width: 100%;
                 height: 2px;
-                background: #000;
+                border-radius: 2px;
+                background: #fff;
+                border: none;
             }
-
             input[type=range]::-moz-range-thumb {
                 height: 16px;
                 width: 16px;
-                border-radius: 8px;
-                border: 2px solid #efb708;
-                background: #ffffff;
+                border-radius: 10px;
+                background: #fff;
                 cursor: pointer;
+                -moz-appearance: none;
+                margin-top: -8px;
+                transition: .3s;
             }
 
             input[type=range]::-ms-track {
                 width: 100%;
-                height: 1px;
-                cursor: pointer;
-                background: transparent;
-                border-color: transparent;
-                color: transparent;
+                height: 2px;
+                border-radius: 2px;
+                background: #fff;
+                border: none;
             }
 
             input[type=range]::-ms-fill-lower {
@@ -335,10 +316,11 @@ export default class crop {
             input[type=range]::-ms-thumb {
                 height: 16px;
                 width: 16px;
-                border-radius: 8px;
-                background: #ffffff;
+                border-radius: 10px;
+                background: #fff;
                 cursor: pointer;
-                height: 1px;
+                margin-top: -8px;
+                transition: .3s;
             }
 
             input[type=range]:focus::-ms-fill-lower {
