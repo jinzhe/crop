@@ -1,0 +1,30 @@
+{
+	"private": false,
+	"name": "@zee.kim/crop",
+	"version": "1.0.0",
+	"description": "图片裁剪",
+	"main": "src/crop.js",
+	"scripts": {
+		"build": "node build.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jinzhe/crop.git"
+	},
+	"keywords": [ "crop" ],
+	"author": "zee kim",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jinzhe/crop/issues"
+	},
+	"homepage": "https://zee.kim",
+	"devDependencies": {
+		"babel-core": "^6.22.1",
+		"babel-preset-es2015-rollup": "^3.0.0",
+		"rollup": "^0.41.4",
+		"rollup-plugin-babel": "^2.7.1",
+		"rollup-plugin-commonjs": "^7.0.0",
+		"rollup-plugin-node-resolve": "^2.0.0",
+		"rollup-plugin-uglify": "^1.0.1"
+	}
+}
