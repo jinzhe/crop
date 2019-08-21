@@ -1,46 +1,26 @@
-# vue-swipe
+# crop
 =============
 
-基于 Vue.js 的轮播组件
+无依赖的图片裁剪库
 
-![](demo.gif)
+![demo.gif](https://i.loli.net/2019/08/21/rapFDu5UVs2By3M.gif)
 
 ## 安装
 
 ```sh
-npm install --save @zee.kim/vue-swipe
+npm install --save @zee.kim/crop
 ```
 
 ## 使用
-首先在项目的入口文件中引入, 调用 Vue.use 全局安装组件。
 
 ```javascript
-import vueSwipe from '@zee.kim/vue-swipe'
-Vue.use(vueSwipe)
-```
-
-```html
-<div id="app">
-    <swipe 
-    :autoplay="autoplay" 
-    :width="width" 
-    :height="height" 
-    :items="items"></swipe>
-</div>
-```
-
-```javascript
-export default {
-    data() {
-        return {
-            autoplay:true,
-            width: window.innerWidth,
-            height: 200,
-            items: [
-                "http://domain/xxx.jpg",
-                "http://domain/xxx.jpg"
-            ]
-        };
+new crop({
+    width: 300,
+    height: 300,
+    //url:"", //默认显示图片
+    success: function (data) {
+        console.log(data);//这是个base64 图片字符串
     }
-}
+});
 ```
+ 
