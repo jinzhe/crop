@@ -1,8 +1,4 @@
-# crop
-=============
-
-无依赖的图片裁剪库
-
+# 无依赖的图片裁剪库
 ![demo.gif](https://i.loli.net/2019/08/21/rapFDu5UVs2By3M.gif)
 
 ## 安装
